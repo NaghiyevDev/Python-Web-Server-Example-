@@ -1,0 +1,43 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Default Title{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+</nav>
+
+<div class="left-sidebar">
+        <h3>Articles</h3>
+        <ul>
+            <li><a href="#">Article 1</a></li>
+            <li><a href="#">Article 2</a></li>
+            <li><a href="#">Article 3</a></li>
+        </ul>
+    </div>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <div class="right-sidebar">
+        <h3>Advertisements</h3>
+        <div class="ad">
+            <img src="https://via.placeholder.com/300x250" alt="Ad Placeholder">
+            <p>Advertisement text or details here.</p>
+        </div>
+    </div>
+    
+<footer>
+    <h6>© 2024 My Website. All rights reserved.</h6>
+</footer>
+
+</body>
+</html>
